@@ -37,6 +37,11 @@ namespace la_mia_pizzeria_static.Controllers
         {
             if (!ModelState.IsValid)
             {
+                if (ModelState["Price"].Errors.Count > 0)
+                {
+                    ModelState["Price"].Errors.Clear();
+                    ModelState["Price"].Errors.Add("Il prezzo deve essere compreso tra 1 e 30");
+                }
                 return View(pizza);
             }
 
