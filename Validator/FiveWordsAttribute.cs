@@ -2,7 +2,7 @@
 
 namespace la_mia_pizzeria_static.Validator
 {
-    public class FiveWords : ValidationAttribute
+    public class FiveWordsAttribute : ValidationAttribute
     {
         protected override ValidationResult? IsValid(object? value, ValidationContext validationContext)
         {
